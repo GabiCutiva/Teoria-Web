@@ -1,0 +1,105 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Mapa de navegación</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;width:1900px;background:#fff;color:#222;font-size:14px}
+.top{background:#000;color:#fff;padding:18px 34px;display:flex;align-items:center;gap:18px}
+.top .esc{width:40px;height:46px;border:2px solid #fff;border-radius:0 0 18px 18px}
+.top h1{font-size:22px;font-weight:400}.top small{color:#bbb;display:block;font-size:13px}
+.strip{background:#3c3c3b;color:#eee;padding:8px 34px;font-size:12px;letter-spacing:.5px}
+.strip b{background:#7fa32b;color:#111;padding:3px 10px;margin-right:14px}
+.wrap{padding:26px 34px}
+.n{display:inline-block;border:2px solid #555;border-radius:6px;background:#fff;padding:7px 12px;font-size:13px;position:relative;white-space:nowrap}
+.n.wf{border-color:#7fa32b;background:#eef5dc;font-weight:700}
+.n.wf i{position:absolute;top:-10px;right:-8px;background:#7fa32b;color:#fff;font-style:normal;font-size:10px;padding:2px 6px;border-radius:8px}
+.n.root{background:#333;color:#fff;border-color:#333;font-weight:700}
+.n.role{color:#fff;font-weight:700;font-size:15px;padding:9px 16px}
+.n.act{border-style:dashed;color:#555;font-size:12px}
+.entry{text-align:center;margin-bottom:6px}
+.entry .n{margin:0 6px}
+.vline{width:2px;height:22px;background:#555;margin:0 auto}
+.hline{height:2px;background:#555;margin:0 calc(100%/6)}
+.cols{display:flex;gap:26px}
+.col{flex:1 1 0;min-width:0;border:1px solid #ddd;border-radius:8px;padding:0 14px 16px;background:#fafafa}
+.col>.head{text-align:center;margin-top:-1px}
+.col>.head .vline{height:20px}
+/* árbol */
+ul.tree{list-style:none;padding-left:0;margin-top:14px}
+ul.tree ul{list-style:none;padding-left:26px}
+ul.tree li{position:relative;padding:5px 0 5px 22px}
+ul.tree li::before{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid #999}
+ul.tree li:last-child::before{bottom:auto;height:22px}
+ul.tree li::after{content:"";position:absolute;left:0;top:22px;width:20px;border-top:2px solid #999}
+.cross{margin-top:22px;border:1px solid #ddd;border-radius:8px;padding:14px 18px;background:#fff}
+.cross h3{font-size:15px;margin-bottom:10px}
+.cross table{border-collapse:collapse;width:100%;font-size:13px}
+.cross td,.cross th{border-bottom:1px solid #e3e3e3;padding:6px 8px;text-align:left}
+.cross th{background:#f0f0f0;font-size:12px;text-transform:uppercase;color:#555}
+.legend{display:flex;gap:26px;align-items:center;margin-top:18px;font-size:13px}
+</style></head><body>
+<div class="top"><div class="esc"></div><div><h1>Mapa de navegación · Trayectoria Estudiantil ASI</h1><small>Universidad Nacional de Colombia · manizales.unal.edu.co</small></div></div>
+<div class="strip"><b>SEDE MANIZALES</b>Estructura jerárquica por rol · los nodos en verde corresponden a los wireframes WF-01 a WF-05</div>
+<div class="wrap">
+<div class="entry"><span class="n root">Iniciar sesión (login institucional @unal.edu.co)</span></div>
+<div class="vline"></div>
+<div class="entry"><span class="n act">El sistema valida USUARIO.rol y USUARIO.estado = activo → redirige al panel del rol</span></div>
+<div class="vline"></div>
+<div class="hline"></div>
+<div class="cols">
+
+<div class="col"><div class="head"><div class="vline"></div><span class="n role" style="background:#333">Rol: Dirección</span></div>
+<ul class="tree">
+<li><span class="n wf">Panel principal<i>WF-01</i></span>
+ <ul><li><span class="n act">Tarjetas de indicadores → listados filtrados</span></li>
+ <li><span class="n act">Alertas recientes → «Revisar»</span></li>
+ <li><span class="n act">Solicitudes pendientes → «Resolver»</span></li>
+ <li><span class="n act">Accesos rápidos (cargar activos, registrar TG / práctica, asignar tutor, ver reportes)</span></li></ul></li>
+<li><span class="n wf">Estudiantes (listado)<i>WF-02</i></span>
+ <ul><li><span class="n">Importar admitidos</span></li><li><span class="n">Cargar estudiantes activos (.xlsx)</span></li><li><span class="n">Exportar a Excel</span></li>
+ <li><span class="n wf">Ficha del estudiante<i>WF-03</i></span>
+  <ul><li><span class="n" style="white-space:normal">Pestañas: Datos generales · Perfil académico · Perfil psicosocial · Trabajo de grado y práctica · Actividades · Solicitudes · Tutorías · Alertas</span></li>
+  <li><span class="n">Registrar tutoría</span></li><li><span class="n">Cambiar tutor</span></li><li><span class="n">Inactivar estudiante</span></li></ul></li></ul></li>
+<li><span class="n">Profesores</span><ul><li><span class="n">Crear / editar profesor</span></li></ul></li>
+<li><span class="n">Trabajos de grado y prácticas</span><ul><li><span class="n">Registrar trabajo de grado</span></li><li><span class="n">Registrar práctica</span></li></ul></li>
+<li><span class="n">Solicitudes</span><ul><li><span class="n">Detalle de la solicitud → Resolver (respuesta, acta)</span></li></ul></li>
+<li><span class="n">Alertas</span><ul><li><span class="n">Detalle → Marcar revisada / acción tomada</span></li></ul></li>
+<li><span class="n wf">Reportes consolidados<i>WF-05</i></span><ul><li><span class="n">Exportar a Excel</span></li></ul></li>
+<li><span class="n">Bitácora</span></li>
+</ul></div>
+
+<div class="col"><div class="head"><div class="vline"></div><span class="n role" style="background:#555">Rol: Profesor(a)</span></div>
+<ul class="tree">
+<li><span class="n">Panel principal del profesor</span><ul><li><span class="n act">Alertas de mis tutorados</span></li></ul></li>
+<li><span class="n">Mis tutorados</span>
+ <ul><li><span class="n wf">Ficha del estudiante (solo tutorados)<i>WF-03</i></span>
+  <ul><li><span class="n">Registrar tutoría</span></li><li><span class="n">Revisar alerta</span></li></ul></li></ul></li>
+<li><span class="n">Tutorías</span><ul><li><span class="n">Registrar tutoría (individual / grupal)</span></li><li><span class="n">Historial de tutorías</span></li></ul></li>
+<li><span class="n">Trabajos de grado que dirijo / codirijo</span></li>
+<li><span class="n">Prácticas que asesoro</span><ul><li><span class="n">Registrar observación del asesor</span></li></ul></li>
+<li><span class="n">Actividades que acompaño</span></li>
+</ul></div>
+
+<div class="col"><div class="head"><div class="vline"></div><span class="n role" style="background:#7fa32b">Rol: Estudiante</span></div>
+<ul class="tree">
+<li><span class="n">Panel principal del estudiante</span><ul><li><span class="n act">Estado de mis solicitudes y próximas tutorías</span></li></ul></li>
+<li><span class="n">Mi ficha</span><ul><li><span class="n">Actualizar dirección, ciudad y teléfono</span></li><li><span class="n">Diligenciar perfil psicosocial</span></li></ul></li>
+<li><span class="n">Trabajo de grado y práctica (consulta)</span></li>
+<li><span class="n">Actividades interdisciplinares</span>
+ <ul><li><span class="n wf">Registrar actividad interdisciplinar<i>WF-04</i></span>
+  <ul><li><span class="n">Paso 1: Categoría</span></li><li><span class="n">Paso 2: Datos de la actividad</span></li><li><span class="n">Paso 3: Revisar y guardar</span></li></ul></li></ul></li>
+<li><span class="n">Mis solicitudes</span><ul><li><span class="n">Radicar solicitud + soportes</span></li><li><span class="n">Ver respuesta</span></li></ul></li>
+<li><span class="n">Mis tutorías</span></li>
+</ul></div>
+</div>
+
+<div class="cross"><h3>Enlaces transversales (atajos entre pantallas)</h3>
+<table><tr><th>Desde</th><th>Elemento</th><th>Lleva a</th></tr>
+<tr><td>WF-01 Panel principal</td><td>Tarjeta «Estudiantes activos» / acceso «Cargar estudiantes activos»</td><td>WF-02 Estudiantes</td></tr>
+<tr><td>WF-01 Panel principal</td><td>Botón «Revisar» de una alerta</td><td>WF-03 Ficha del estudiante → pestaña Alertas</td></tr>
+<tr><td>WF-01 Panel principal</td><td>Botón «Resolver» / tarjeta «Solicitudes sin resolver»</td><td>Solicitudes → Detalle de la solicitud</td></tr>
+<tr><td>WF-01 Panel principal</td><td>Acceso rápido «Ver reportes»</td><td>WF-05 Reportes consolidados</td></tr>
+<tr><td>WF-02 Estudiantes</td><td>Botón «Ver ficha»</td><td>WF-03 Ficha del estudiante</td></tr>
+<tr><td>WF-03 Ficha del estudiante</td><td>Pestaña «Actividades»</td><td>Actividades del estudiante (las registra él mismo en WF-04)</td></tr>
+<tr><td>Todas las pantallas</td><td>Menú lateral · migas de pan · «Cerrar sesión»</td><td>Secciones del rol · nivel anterior · Iniciar sesión</td></tr></table></div>
+
+<div class="legend"><span class="n wf">Pantalla con wireframe<i>WF</i></span><span class="n">Pantalla o acción del sistema</span><span class="n act">Contenido o comportamiento dentro de la pantalla</span></div>
+</div></body></html>
