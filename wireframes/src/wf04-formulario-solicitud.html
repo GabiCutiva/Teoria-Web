@@ -1,0 +1,36 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>WF-04 Formulario – Radicar solicitud</title>
+<link rel="stylesheet" href="wf.css"></head><body>
+<div style="position:relative">
+ <div class="unal-top">
+  <div class="unal-logo"><div class="unal-escudo">ESCUDO</div>
+   <div class="unal-word"><b>UNIVERSIDAD</b><b>NACIONAL</b><span>DE COLOMBIA</span></div></div>
+  <div class="unal-links"><span>Sedes ▾</span><span>Correo</span><span>SIA</span><span>Biblioteca</span><span class="ico"></span><span class="ico"></span></div>
+  <div class="wf-tag">WF-04 · Formulario – Radicar solicitud</div>
+ </div>
+ <div class="unal-strip"><span class="sede">Sede Manizales</span><span>Facultad de Administración</span><span>Programa: Administración de Sistemas Informáticos</span><span style="margin-left:auto;text-transform:none;color:#aaa">trayectoria-asi.unal.edu.co/solicitudes/nueva</span></div>
+ <div class="app-bar"><span class="name">☆ Trayectoria Estudiantil ASI <small>Sistema de seguimiento a estudiantes</small></span>
+  <div class="user"><div class="bell">🔔<i>2</i></div><div class="avatar"></div>
+   <div><b>Gabriela Cutiva</b><br><span class="pill dark">Rol: Estudiante</span></div><span class="btn">Cerrar sesión</span></div></div>
+ <div class="layout"><nav class="side"><h6>MENÚ</h6><a class="">Mi panel</a><a class="">Mi perfil</a><a class="on">Mis solicitudes</a><a class="">Mis tutorías</a><a class="">Actividades interdisciplinares</a><a class="">Trabajo de grado</a><div class="sep"></div><a>Ayuda</a><a>Mi cuenta</a></nav>
+  <main class="main"><div class="crumb">Inicio › Mis solicitudes › Nueva solicitud</div><h1>Radicar solicitud</h1><div class="sub">La Dirección del programa responderá por este medio y por correo institucional.</div>
+<div class="steps"><span class="mark">1</span><div class="done">1. Tipo de solicitud ✓</div><div class="on">2. Detalle y soportes</div><div>3. Confirmación</div></div>
+<div class="row"><div class="col" style="flex:2"><div class="card">
+<div class="row"><div class="field col"><label>Tipo de solicitud <em>*</em></label><div class="input sel" style="color:#333">Homologación de asignaturas</div></div>
+<div class="field col"><label>Fecha de radicación</label><div class="input" style="background:#eee">01/10/2026 (automática)</div></div></div>
+<div class="field"><label>Datos del solicitante <span class="mark">2</span></label><div class="input" style="background:#eee;color:#555">Gabriela Cutiva · C.C. 1.054.xxx.101 · gcutiva@unal.edu.co</div></div>
+<div class="field"><label>Descripción de la solicitud <em>*</em> <span class="mark">3</span></label><div class="input area">Describa qué solicita y por qué…</div><div class="help">Mínimo 30 caracteres · 0/1000</div></div>
+<div class="field"><label>Soportes <span class="mark">4</span></label><div class="drop">⇪ Arrastre aquí los archivos o <u>selecciónelos</u><br><span class="help">PDF, JPG o PNG · máximo 5 MB por archivo · hasta 5 archivos</span></div>
+<table style="margin-top:10px"><tr><th>Archivo</th><th>Tipo de soporte</th><th>Tamaño</th><th></th></tr>
+<tr><td>📄 certificado_notas.pdf</td><td><div class="input sel" style="height:28px;color:#333">Certificado de notas</div></td><td>820 KB</td><td>✕</td></tr>
+<tr><td>📄 contenido_programatico.pdf</td><td><div class="input sel" style="height:28px">Seleccione…</div><div class="help" style="color:#c33">Seleccione el tipo de soporte</div></td><td>1,4 MB</td><td>✕</td></tr></table></div>
+<div class="field"><label><input type="checkbox" checked> Autorizo el tratamiento de mis datos personales según la política de la Universidad <em>*</em></label></div>
+<div style="display:flex;gap:10px;justify-content:flex-end;border-top:1px solid #ddd;padding-top:14px"><span class="mark">5</span><span class="btn">‹ Anterior</span><span class="btn">Guardar borrador</span><span class="btn pri">Continuar a confirmación ›</span></div>
+</div></div>
+<div class="col"><div class="card"><h3><span class="mark">6</span> Requisitos para este tipo</h3><ul style="padding-left:18px;line-height:1.8">
+<li>Certificado de notas de la institución de origen</li><li>Contenido programático de cada asignatura</li><li>Plazo de respuesta: 15 días hábiles</li></ul></div>
+<div class="card"><h3>Mis solicitudes recientes</h3><table><tr><th>Tipo</th><th>Estado</th></tr><tr><td>Carga mínima</td><td><span class="pill ok">Resuelta</span></td></tr><tr><td>Cancelación de asignatura</td><td><span class="pill warn">En estudio</span></td></tr></table></div></div></div></main></div>
+ <div class="notes"><h4>Notas de diseño (no forman parte de la interfaz)</h4><ol><li><span class="mark">1</span><span>Formulario por pasos para que el estudiante sepa en qué etapa va y no se pierda.</span></li><li><span class="mark">2</span><span>Los datos del solicitante se toman de la sesión (id_documento) y no se pueden editar, lo que evita errores.</span></li><li><span class="mark">3</span><span>Los campos obligatorios llevan *. La validación se hace al salir de cada campo y los errores aparecen junto al campo.</span></li><li><span class="mark">4</span><span>Varios soportes por solicitud (entidad débil SOPORTE: nombre_archivo + tipo_soporte + ruta + fecha_carga).</span></li><li><span class="mark">5</span><span>Se puede guardar un borrador. Al confirmar, la solicitud queda «Pendiente» y se notifica a Dirección (id_usuario_resuelve vacío).</span></li><li><span class="mark">6</span><span>El panel lateral cambia según el tipo elegido y muestra los soportes requeridos, para reducir solicitudes incompletas.</span></li></ol></div>
+ <div class="unal-foot"><div><b>Universidad Nacional de Colombia</b>Sede Manizales · Campus La Nubia<br>Manizales, Caldas</div>
+  <div><b>Contacto</b>Dirección de programa ASI<br>Atención en línea</div><div><b>Régimen legal</b>Política de tratamiento de datos personales<br>Ley 1581 de 2012</div>
+  <div class="gov"><span></span><span></span><span></span></div></div>
+</div></body></html>

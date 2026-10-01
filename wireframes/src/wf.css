@@ -1,0 +1,107 @@
+/* Wireframes de baja/media fidelidad – estilo inspirado en unal.edu.co */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Ancizar Sans",Arial,Helvetica,sans-serif;font-size:13px;color:#333;background:#fff;width:1440px}
+a{color:#333}
+.mark{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#e8590c;color:#fff;font-size:12px;font-weight:700;margin:0 4px;vertical-align:middle;flex:none;box-shadow:0 0 0 2px #fff}
+
+/* ===== Cabecera institucional UNAL ===== */
+.unal-top{background:#000;color:#fff;height:78px;display:flex;align-items:center;padding:0 32px;gap:24px}
+.unal-logo{display:flex;align-items:center;gap:12px}
+.unal-escudo{width:46px;height:52px;border:2px solid #fff;border-radius:0 0 22px 22px;display:flex;align-items:center;justify-content:center;font-size:9px;text-align:center;line-height:1.1}
+.unal-word{font-family:Georgia,"Times New Roman",serif;line-height:1.05}
+.unal-word b{display:block;font-size:17px;letter-spacing:.5px;font-weight:400}
+.unal-word span{font-size:12px;color:#bbb;letter-spacing:2px}
+.unal-links{margin-left:auto;display:flex;gap:22px;font-size:12px;color:#ccc}
+.unal-links .ico{width:18px;height:18px;border:1px solid #888;border-radius:50%;display:inline-block}
+.unal-strip{background:#3c3c3b;color:#eee;height:36px;display:flex;align-items:center;padding:0 32px;gap:26px;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.unal-strip .sede{background:#94b43b;color:#111;padding:0 14px;height:100%;display:flex;align-items:center;font-weight:700}
+
+/* ===== Barra de la aplicación ===== */
+.app-bar{background:#e6e6e6;border-bottom:1px solid #c8c8c8;height:54px;display:flex;align-items:center;padding:0 32px;gap:16px}
+.app-bar .name{font-size:17px;font-weight:700}
+.app-bar .name small{font-weight:400;color:#666;font-size:12px;margin-left:8px}
+.app-bar .user{margin-left:auto;display:flex;align-items:center;gap:12px}
+.avatar{width:32px;height:32px;border-radius:50%;background:#bbb;border:1px solid #888}
+.pill{display:inline-block;border:1px solid #888;border-radius:12px;padding:2px 10px;font-size:11px;background:#fff}
+.pill.dark{background:#333;color:#fff;border-color:#333}
+.pill.warn{background:#fff3bf;border-color:#c9a400}
+.pill.bad{background:#ffd8d8;border-color:#c33}
+.pill.ok{background:#e3f0c8;border-color:#7a9a2a}
+.bell{width:30px;height:30px;border:1px solid #888;border-radius:6px;position:relative;display:flex;align-items:center;justify-content:center;font-size:14px}
+.bell i{position:absolute;top:-6px;right:-6px;background:#333;color:#fff;font-style:normal;font-size:10px;border-radius:9px;padding:1px 5px}
+
+/* ===== Layout ===== */
+.layout{display:flex;min-height:600px}
+.side{width:230px;background:#f4f4f4;border-right:1px solid #d5d5d5;padding:18px 14px}
+.side h6{font-size:10px;color:#777;letter-spacing:1px;margin:6px 8px 10px}
+.side a{display:block;padding:9px 10px;border-radius:4px;text-decoration:none;margin-bottom:2px}
+.side a.on{background:#333;color:#fff;font-weight:700}
+.side .sep{border-top:1px solid #d5d5d5;margin:12px 0}
+.main{flex:1;padding:22px 32px 40px;background:#fafafa}
+.crumb{font-size:11px;color:#777;margin-bottom:6px}
+h1{font-size:24px;font-weight:400;margin-bottom:4px}
+.sub{color:#666;margin-bottom:18px}
+.row{display:flex;gap:18px}
+.col{flex:1}
+.card{background:#fff;border:1px solid #cfcfcf;border-radius:4px;padding:16px;margin-bottom:18px}
+.card h3{font-size:15px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.card h3 .right{margin-left:auto;font-weight:400;font-size:12px}
+
+.kpi{flex:1;background:#fff;border:1px solid #bbb;border-left:6px solid #555;border-radius:4px;padding:14px 16px}
+.kpi b{font-size:30px;display:block}
+.kpi span{color:#666;font-size:12px}
+
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:11px;text-transform:uppercase;color:#555;background:#efefef;padding:8px;border-bottom:1px solid #bbb}
+td{padding:8px;border-bottom:1px solid #e2e2e2}
+tr.hl td{background:#fff9e0}
+
+.btn{display:inline-block;border:1px solid #777;background:#fff;border-radius:4px;padding:6px 14px;font-size:12px}
+.btn.pri{background:#333;color:#fff;border-color:#333}
+.btn.sm{padding:3px 9px;font-size:11px}
+.btn.block{display:block;text-align:center;margin-bottom:8px;padding:9px}
+.link{text-decoration:underline;font-size:12px}
+
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;font-weight:700;margin-bottom:5px}
+.field label em{color:#c33;font-style:normal}
+.input{border:1px solid #999;background:#fff;border-radius:3px;height:34px;padding:0 10px;display:flex;align-items:center;color:#999}
+.input.sel::after{content:"▾";margin-left:auto;color:#555}
+.input.area{height:96px;align-items:flex-start;padding-top:8px}
+.help{font-size:11px;color:#777;margin-top:4px}
+.drop{border:2px dashed #aaa;border-radius:6px;padding:22px;text-align:center;color:#777;background:#fcfcfc}
+
+.ph{background:#eee;border:1px solid #bbb;position:relative;overflow:hidden}
+.ph::before,.ph::after{content:"";position:absolute;top:50%;left:-10%;width:120%;border-top:1px solid #c6c6c6}
+.ph::before{transform:rotate(18deg)}.ph::after{transform:rotate(-18deg)}
+
+.tabs{display:flex;border-bottom:2px solid #333;margin-bottom:16px}
+.tabs span{padding:9px 16px;border:1px solid #ccc;border-bottom:none;margin-right:3px;background:#f0f0f0;border-radius:4px 4px 0 0;font-size:12px}
+.tabs span.on{background:#333;color:#fff;border-color:#333;font-weight:700}
+.tabs span.lock{color:#999}
+
+.kv{display:grid;grid-template-columns:150px 1fr;row-gap:7px;column-gap:10px;font-size:12px}
+.kv dt{color:#777}
+.bar{height:10px;background:#e2e2e2;border-radius:5px;overflow:hidden}
+.bar i{display:block;height:100%;background:#555}
+
+.steps{display:flex;gap:0;margin-bottom:18px}
+.steps div{flex:1;padding:9px 12px;background:#eee;border:1px solid #ccc;font-size:12px}
+.steps div.on{background:#333;color:#fff;font-weight:700}
+.steps div.done{background:#d9d9d9}
+
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid #888;border-radius:14px;padding:3px 10px;margin:0 6px 6px 0;background:#fff;font-size:12px}
+
+/* ===== Notas de diseño ===== */
+.notes{background:#fff4ec;border-top:3px solid #e8590c;padding:18px 32px 22px}
+.notes h4{color:#b8460a;font-size:14px;margin-bottom:10px}
+.notes ol{list-style:none;columns:2;column-gap:40px}
+.notes li{display:flex;gap:8px;margin-bottom:8px;break-inside:avoid;line-height:1.4}
+.wf-tag{position:absolute;top:8px;right:12px;background:#e8590c;color:#fff;font-size:11px;padding:3px 9px;border-radius:3px;font-weight:700}
+
+/* ===== Pie institucional ===== */
+.unal-foot{background:#3c3c3b;color:#ccc;padding:20px 32px;display:flex;gap:40px;font-size:11px}
+.unal-foot b{color:#fff;display:block;margin-bottom:4px}
+.unal-foot .gov{margin-left:auto;display:flex;gap:10px}
+.unal-foot .gov span{width:70px;height:34px;border:1px solid #777}
+.tabs span.mark{padding:0;border:none;background:#e8590c;color:#fff;border-radius:50%;margin:6px 8px 0 0}
